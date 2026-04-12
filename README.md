@@ -10,7 +10,7 @@ This project evaluates and identifies variables that are statistically significa
 
 ## Dataset Description
 The dataset contains 20 variables describing student profiles, including:
-* Socio-economic status: School type, Access to resources, Tutoring, Parental education level, Family income
+* **Socio-economic status:** School type, Access to resources, Tutoring, Parental education level, Family income
 * Physical barriers: Physical activites, Extracurricular activities, Distance from home
 * Commitment: Hours studied, Motivation, Attendance
 * Influence from others: Parental involvement, Peer influence
