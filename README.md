@@ -18,7 +18,20 @@ The dataset contains 20 variables describing student profiles, including:
 * **Lifestyle & Well-being:** Sleep_Hours, Physical_Activity, Extracurricular_Activities
 * **Accessibility & Constraints:** Distance_from_Home, Learning_Disabilities
 * **Demographics:** Gender
-* Target variable: Exam Score (integer 0-100)
+* **Target Variable:** Exam Score (integer 0-100)
+
+## Methodology
+
+### Data Cleaning and Preprocessing
+
+The data cleaning process checked for and addressed the following:
+
+1. Data Entry Errors: Checked for duplicate and impossible values (dropped 1 row with an exam score > 100%)
+2. Standardization: Checked for standardization among categorical variables to ensure consistancy (e.g. variations in spelling and capitalization)
+3. Null values: Identified and dropped rows with null values after performing MCAR test to evaluate any significant correlation to exam scores.
+4. Outliers: Checked for extreme outliers
+
+[Data cleaning process](student_performance/student_factors_cleaning.ipynb)
 
 ## Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
