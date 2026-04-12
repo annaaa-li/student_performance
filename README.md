@@ -10,10 +10,14 @@ This project evaluates and identifies variables that are statistically significa
 
 ## Dataset Description
 The dataset contains 20 variables describing student profiles, including:
-* **Socio-economic status:** School type, Access to resources, Tutoring, Parental education level, Family income
-* Physical barriers: Physical activites, Extracurricular activities, Distance from home
-* Commitment: Hours studied, Motivation, Attendance
-* Influence from others: Parental involvement, Peer influence
+* **Socioeconomic Factors:** School_Type, Access_to_Resources, Internet_Access, Tutoring_Sessions, Family_Income, Parental_Education_Level
+* **Student Effort & Engagement:** Hours_Studied, Attendance, Motivation_Level
+* **Academic Background:** Previous_Scores
+* **School & Instructional Quality:** Teacher_Quality
+* **Social & Environmental Influences:** Parental_Involvement, Peer_Influence
+* **Lifestyle & Well-being:** Sleep_Hours, Physical_Activity, Extracurricular_Activities
+* **Accessibility & Constraints:** Distance_from_Home, Learning_Disabilities
+* **Demographics:** Gender
 * Target variable: Exam Score (integer 0-100)
 
 ## Tableau Dashboard
