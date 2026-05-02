@@ -85,5 +85,7 @@ After dropping the observations of high performing students and refitting the mo
 
 However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and signifies the assumption of homoskedasticity holds, but performing a Breusch-Pagan test validates there is no statistical evidence of heteroskedasticity and our model assumptions hold.
 
+![fitted values vs residuals for new model](./images/fitted_vs_resid_avg_students.png)
+
 `het_breuschpagan(lm_avg.resid, lm_avg.model.exog)
 output: (16.65273136551327, 0.5470899736943641, 0.9248073942751136, 0.5475789633026553)`
