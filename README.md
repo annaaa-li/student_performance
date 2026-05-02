@@ -66,7 +66,7 @@ As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours
 
 ### Checking Model Assumptions
 
-The workflow for checking model assumptions for an LM is as follows:
+##### The workflow for checking model assumptions for an LM is as follows:
 * Residuals vs fitted → linearity + homoscedasticity (visual)
 * QQ plot → normality
 * Breusch–Pagan → formal heteroskedasticity/homoscedasticity test
@@ -88,7 +88,7 @@ Specifically 54 observations from the dataset are high performing students (with
 
 As we are unable to accurately account for high performing students I decided to redefine my analysis to focus on exploring what factors influence exam scores among mid-performing students.
 
-#### Removing High Performers and Refitting the Data
+### Removing High Performers and Refitting the Data
 
 After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality which we can ignore.
 
