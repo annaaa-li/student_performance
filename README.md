@@ -69,4 +69,9 @@ As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours
 
 ![Scatterplot of Exam Score vs Hours Studied](./images/ES_Hours_Studied_Scatterplot.png)
 
+First I checked the for linearity and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
 
+![Homoscedasticity check](./images/.png)
+![QQ-plot](./images/.png)
+
+These both indicated issues with our model.
