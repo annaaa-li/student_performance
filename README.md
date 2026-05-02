@@ -45,17 +45,7 @@ Visual analysis in Tableau revealed four variables that show a visible relations
 
 *Figure 2: median exam score by hours studied*
 
-Figure 1 and Figure 2 show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship.
-
-![exam score (median) by parental involvement](./images/exam_score_(median)_by_parental_involvement.png)
-
-*Figure 3: median exam score by parental involvement*
-
-![exam score (median) by tutoring sessions](./images/exam_score_(median)_by_tutoring_sessions.png)
-
-*Figure 4: median exam score by tutoring sessions*
-
-Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
+Figure 1 and Figure 2 show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship. Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
 
 ## Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
@@ -71,7 +61,7 @@ As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours
 
 First I checked the for linearity and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
 
-![Homoscedasticity check](./images/.png)
-![QQ-plot](./images/.png)
+![Homoscedasticity check](./images/fitted_vs_resid.png)
+![QQ-plot](./images/qq-plot.png)
 
-These both indicated issues with our model.
+These both indicate issues with our model.
