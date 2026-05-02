@@ -88,4 +88,9 @@ However the fitted values vs residuals plot shows diagonal banding as opposed to
 ![fitted values vs residuals for new model](./images/fitted_vs_resid_avg_students.png)
 
 `het_breuschpagan(lm_avg.resid, lm_avg.model.exog)
+
 output: (16.65273136551327, 0.5470899736943641, 0.9248073942751136, 0.5475789633026553)`
+
+*both p-values are > 0.05 so there is no evidence to reject the null hypothesis (H₀): homoskedasticity (constant error variance)*
+
+
