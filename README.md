@@ -55,7 +55,17 @@ Figure 1 and Figure 2 show a noticable correlation between factors and median ex
 
 *Figure 4: median exam score by tutoring sessions*
 
-
+Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
 
 ## Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
+
+## Evaluating Linearity and Checking Model Assumptions
+
+As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours studied show a weak positive linear relationship for these variables with a large amount of noise which may be the influence of other variables.
+
+![Scatterplot of Exam Score vs Attendance](./images/image.png)
+
+![Scatterplot of Exam Score vs Hours Studied](./images/image.png)
+
+
