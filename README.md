@@ -51,7 +51,7 @@ Figure 1 and Figure 2 show a noticable correlation between factors and median ex
 #### Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
 
-### Evaluating Linearity and Checking Model Assumptions
+### Key Factors of Interest
 
 As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours studied show a weak positive linear relationship for these variables with a large amount of noise which may be the influence of other variables.
 
@@ -64,7 +64,18 @@ As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours
 
 *Figure 4: Scatterplot of Exam Score vs Hours Studied*
 
-First I checked the for linearity and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
+### Checking Model Assumptions
+
+The workflow for checking model assumptions for an LM is as follows:
+* Residuals vs fitted → linearity + homoscedasticity (visual)
+* QQ plot → normality
+* Breusch–Pagan → formal heteroskedasticity/homoscedasticity test
+* Durbin–Watson / residual ordering → independence
+* VIF → multicollinearity
+* Cook’s distance / leverage → influence
+
+
+First I checked for linearity, homoskedasticity, and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
 
 ![Homoscedasticity check](./images/fitted_vs_resid.png)
 ![QQ-plot](./images/qq-plot.png)
@@ -77,7 +88,7 @@ Specifically 54 observations from the dataset are high performing students (with
 
 As we are unable to accurately account for high performing students I decided to redefine my analysis to focus on exploring what factors influence exam scores among mid-performing students.
 
-### Removing High Performers and Refitting the Data
+#### Removing High Performers and Refitting the Data
 
 After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality which we can ignore.
 
@@ -92,5 +103,7 @@ However the fitted values vs residuals plot shows diagonal banding as opposed to
 output: (16.65273136551327, 0.5470899736943641, 0.9248073942751136, 0.5475789633026553)`
 
 *both p-values are > 0.05 so there is no evidence to reject the null hypothesis (H₀): homoskedasticity (constant error variance)*
+
+Since the fitted values vs residuals plot shows banding we can not use it to check the assumption of linearity
 
 
