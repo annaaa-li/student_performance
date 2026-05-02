@@ -64,8 +64,9 @@ Based on these figures we try to fit a linear model with the focus on evaluating
 
 As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours studied show a weak positive linear relationship for these variables with a large amount of noise which may be the influence of other variables.
 
-![Scatterplot of Exam Score vs Attendance](./images/image.png)
+![Scatterplot of Exam Score vs Attendance](./images/ES_Attendance_Scatterplot.png)
 
-![Scatterplot of Exam Score vs Hours Studied](./images/image.png)
+
+![Scatterplot of Exam Score vs Hours Studied](./images/ES_Hours_Studied_Scatterplot.png)
 
 
