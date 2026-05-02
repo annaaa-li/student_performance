@@ -37,7 +37,7 @@ The data cleaning process checked for and addressed the following:
 
 Visualizing the data in Tableau revealed 4 factors that visibly show correlation with exam score, with attendance and hourt studied showing the largest change in exam performane and parental involvement and tutoring displaying a smaller change in score. 
 
-![exam score (median) by attendance](student_performance/images/exam_score_(median)_by_attendance.png)
+![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png)
 
 ## Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
