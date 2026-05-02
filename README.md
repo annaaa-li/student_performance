@@ -35,9 +35,23 @@ The data cleaning process checked for and addressed the following:
 
 ### Visualizing Data
 
-Visualizing the data in Tableau revealed 4 factors that visibly show correlation with exam score, with attendance and hourt studied showing the largest change in exam performane and parental involvement and tutoring displaying a smaller change in score. 
+Visual analysis in Tableau revealed four variables that show a visible relationship with median exam score: attendance, hours studied, tutoring sessions, and parental involvement. Among these, attendance and hours studied demonstrate the strongest variation in median scores, while parental involvement and tutoring sessions show more modest differences. 
 
 ![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png)
+*Figure 1: Chart displaying median exam score by attendance shows a positive correlation across all teaching quality levels*
+
+![exam score (median) by hours studied](./images/exam_score_(median)_by_hours_studied.png)
+*Figure 2: median exam score by hours studied*
+
+These two charts show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship.
+
+![exam score (median) by parental involvement](./images/exam_score_(median)_by_parental_involvement.png)
+*Figure 3: median exam score by parental involvement*
+
+![exam score (median) by tutoring sessions](./images/exam_score_(median)_by_tutoring_sessions.png)
+*Figure 4: median exam score by tutoring sessions*
+
+
 
 ## Tableau Dashboard
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
