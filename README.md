@@ -70,10 +70,8 @@ As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours
 * Residuals vs fitted → linearity + homoscedasticity (visual)
 * QQ plot → normality
 * Breusch–Pagan → formal heteroskedasticity/homoscedasticity test
-* Durbin–Watson / residual ordering → independence
 * VIF → multicollinearity
 * Cook’s distance / leverage → influence
-
 
 First I checked for linearity, homoskedasticity, and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
 
@@ -90,11 +88,13 @@ As we are unable to accurately account for high performing students I decided to
 
 ### Removing High Performers and Refitting the Data
 
-After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality which we can ignore.
+After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality at the tails which we can ignore since our sample size is rather large.
 
 ![qq-plot for new model](./images/qq-plot_avg_students.png)
 
-However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and signifies the assumption of homoskedasticity holds, but performing a Breusch-Pagan test validates there is no statistical evidence of heteroskedasticity and our model assumptions hold.
+However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and checks the assumption of linearity and the assumption of homoskedasticity. Within each band the residuals appear to be randomly scattered around 0 and there is no curvature or systematic shape within the bands so we assume linearity holds.
+
+Additionally, performing a Breusch-Pagan test validates there is no statistical evidence of heteroskedasticity and our model assumption of homoskedasticity hold.
 
 ![fitted values vs residuals for new model](./images/fitted_vs_resid_avg_students.png)
 
@@ -104,6 +104,21 @@ output: (16.65273136551327, 0.5470899736943641, 0.9248073942751136, 0.5475789633
 
 *both p-values are > 0.05 so there is no evidence to reject the null hypothesis (H₀): homoskedasticity (constant error variance)*
 
-Since the fitted values vs residuals plot shows banding we can not use it to check the assumption of linearity
+Next, calculating Variance Inflation Factor (VIF) for the model results in values between 1-2 which implies very mild multicollinearity, so the model assumption is satisfied.
+
+Last we check influence using Cook's distance. Calculating and plotting Cook's distance results in 254 observations with values above the Cook's distance threshold (4/n - where n is the total number of observations in the dataset). Since the dataset has over 6000 observations this threshold is very small (~0.00063). In this case all of the observations above the threshold are still very small (<<0.01) and are likely not to be a threat or significant influence on the model.
+
+As a pre-caution I inspected the top 20 points with the largest Cook's distance values and refit the model excluding the points above the threshold. The coefficients, standard errors, and \(R^{2}\) do not change substantially between the two model so I concluded that the points are not truly that influential.
+
+This is means that our model satisfies all the model assumptions.
+
+### Results
+
+
+### Conclusion
+This project successfully developed a linear regression model that predicts student exam score for average performing students (with scores between 50%-78%) with 91% variance explained (R² = 0.910) and an average prediction error of approximately ___ (14.4% relative error).
+
+### Author
+Anna Li
 
 
