@@ -48,35 +48,34 @@ Visual analysis in Tableau revealed four variables that show a visible relations
 
 Figure 1 and Figure 2 show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship. Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
 
-#### Tableau Dashboard
+##### Tableau Dashboard:
 [View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
 
-### Key Factors of Interest
-
-As expected, a scatterplot of Exam scores vs Attendance and Exam Scores vs Hours studied show a weak positive linear relationship for these variables with a large amount of noise which may be the influence of other variables.
-
-![Scatterplot of Exam Score vs Attendance](./images/ES_Attendance_Scatterplot.png)
-
-*Figure 3: Scatterplot of Exam Score vs Attendance*
+### Fitting the Model and Checking Model Assumptions
+I started by running a linear regression with Exam Score as the response variable: Exam_Score ~ Attendance + Previous_Scores + Hours_Studied + Motivation_Level + Sleep_Hours + Tutoring_Sessions + Family_Income + Parental_Education_Level + Parental_Involvement + Teacher_Quality + School_Type + Learning_Disabilities + Gender.
 
 
-![Scatterplot of Exam Score vs Hours Studied](./images/ES_Hours_Studied_Scatterplot.png)
+*Not included: Access_to_Resources Extracurricular_Activities Internet_Access Peer_Influence Physical_Activity Distance_from_Home*
 
-*Figure 4: Scatterplot of Exam Score vs Hours Studied*
-
-### Checking Model Assumptions
-
-##### The workflow for checking model assumptions for an LM is as follows:
+#### The workflow for checking model assumptions for an LM is as follows:
 * Residuals vs fitted → linearity + homoscedasticity (visual)
 * QQ plot → normality
 * Breusch–Pagan → formal heteroskedasticity/homoscedasticity test
 * VIF → multicollinearity
 * Cook’s distance / leverage → influence
 
-First I checked for linearity, homoskedasticity, and normality of residuals by plotting the residuals vs fitted values and a qq-plot of the residuals.
+##### Linearity, Homoskedasticity and Normality
+To check these assumptions I plotted the residuals vs fitted values and a qq-plot.
 
+Fitted vs Residuals             |  QQ-plot
+:-------------------------:|:-------------------------:
+![Homoscedasticity check](./images/fitted_vs_resid.png)  |  ![QQ-plot](./images/qq-plot.png)
+
+
+### wait
 ![Homoscedasticity check](./images/fitted_vs_resid.png)
 ![QQ-plot](./images/qq-plot.png)
+*Figure 3: Fitted values vs Residuals used to check for linearity and homoskedasticity*
 
 These both indicate issues with our model. These graphs show 2 distinct clusters as opposed to a curve or funnel like trend typically seen. Examining the observations that resulted in large residual values found that they were all from high performing students (with exam scores >=78). This suggests perhaps our model does a poor job of predicting high performing students possibly due to key variables missing. 
 
