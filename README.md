@@ -38,9 +38,7 @@ The data cleaning process checked for and addressed the following:
 
 Visual analysis in Tableau revealed four variables that show a visible relationship with median exam score: attendance, hours studied, tutoring sessions, and parental involvement. Among these, attendance and hours studied demonstrate the strongest variation in median scores, while parental involvement and tutoring sessions show more modest differences. 
 
-![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png)
-
-<img src="https://github.com/annaaa-li/student_performance/blob/main/images/exam_score_(median)_by_attendance.png" width="100" height="100"/>
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/exam_score_(median)_by_attendance.png" width="700" height="500"/>
 
 *Figure 1:  positive correlation across all teaching quality levels for median exam score and attendance*
 
