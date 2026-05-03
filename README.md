@@ -70,12 +70,8 @@ To check these assumptions I plotted the residuals vs fitted values and a qq-plo
 Fitted vs Residuals             |  QQ-plot
 :-------------------------:|:-------------------------:
 ![Homoscedasticity check](./images/fitted_vs_resid.png)  |  ![QQ-plot](./images/qq-plot.png)
+*Figure 3: Fitted values vs Residuals used to check for linearity and homoskedasticity* |  *Figure 4: QQ-plot checks normality of residuals*
 
-
-### wait
-![Homoscedasticity check](./images/fitted_vs_resid.png)
-![QQ-plot](./images/qq-plot.png)
-*Figure 3: Fitted values vs Residuals used to check for linearity and homoskedasticity*
 
 These both indicate issues with our model. These graphs show 2 distinct clusters as opposed to a curve or funnel like trend typically seen. Examining the observations that resulted in large residual values found that they were all from high performing students (with exam scores >=78). This suggests perhaps our model does a poor job of predicting high performing students possibly due to key variables missing. 
 
