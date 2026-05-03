@@ -117,7 +117,39 @@ As a pre-caution I inspected the top 20 points with the largest Cook's distance 
 This is means that our model satisfies all the model assumptions.
 
 ## Results
+From the summary of the final model we get the following:
 
+**$$R^{2}$$:** 0.910
+**F-Statistic:** 3523
+
+This implies the model is significant and explains ~91% of variance in exam scores for mid-performing students.
+
+#### Student Effort and Engagement
+Student effort emerged as the most influential set of predictors. Attendance (β = 0.198), hours studied (β = 0.297), and tutoring sessions (β = 0.498) were all strong positive predictors of exam performance. An additional 10 hours of study is associated with a ~3 point increase in exam score. Similarly a 10% increase in attendance is associated with a ~2 point increase in exam score.
+
+Motivation level also significantly influenced scores, with low motivation students scoring about 1 point lower than highly motivated peers (β = −1.04).
+
+While the coefficient values for these variables are not the largest of the predictors, these are all variables students can control in an effort to improve their exam scores which means they have the most potential to influence performance.
+
+#### Family and Socioeconomic Factors
+Parental involvement was one of the strongest predictors in the model. Students with low parental involvement scored nearly 2 points lower (β = −1.95). Family income and parental education also showed similar results, with higher socioeconomic status associated with improved performance.
+
+#### School and Teaching Quality
+Teacher quality was a significant predictor of student outcomes, with lower quality associated with reduced scores. In contrast, school type was not statistically significant (p = 0.211), suggesting that school type does not influence the scores of mid-performing students.
+
+#### Other Variables
+Having learning disabilities was associated with a lower exam score (β = −1.03). Students with learning disabilities were predicted to achieve scores ~1 point lower than their peers without learning abilities after controlling for other variables. Gender and sleep duration were not significant predictors (p = 0.444, p = 0.380).
+
+**Statistically insignificant predictors (p-values > 0.05):**
+* Sleep Hours
+* School type
+* Gender
+
+### Limitations:
+
+Unfortunately the collection method and source of the data are unknown. Further demographic information regarding the students (such as age, country, subject of study, etc) is missing which means it is impossible to draw definitive conclusions about any specific population. For the sake of practice I will assume this sample is representative of the whole population of students.
+
+[Summary of LM](student_performance/images/lm_mid_summary.png)
 
 ### Conclusion
 This project successfully developed a linear regression model that predicts student exam score for average performing students (with scores between 50%-78%) with 91% variance explained (R² = 0.910) and an average prediction error of approximately ___ (14.4% relative error).
