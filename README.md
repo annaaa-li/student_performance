@@ -48,8 +48,7 @@ Visual analysis in Tableau revealed four variables that show a visible relations
 
 Figure 1 and Figure 2 show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship. Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
 
-##### Tableau Dashboard:
-[View Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
+[Dashboard](https://public.tableau.com/views/studentexamscoreexploration/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link)
 
 ### Fitting the Model and Checking Model Assumptions
 I started by running a linear regression with Exam Score as the response variable: Exam_Score ~ Attendance + Previous_Scores + Hours_Studied + Motivation_Level + Sleep_Hours + Tutoring_Sessions + Family_Income + Parental_Education_Level + Parental_Involvement + Teacher_Quality + School_Type + Learning_Disabilities + Gender.
@@ -69,7 +68,7 @@ To check these assumptions I plotted the residuals vs fitted values and a qq-plo
 
 Fitted Values vs Residuals             |  QQ-plot
 :-------------------------:|:-------------------------:
-![Homoscedasticity check](./images/fitted_vs_resid.png)  |  ![QQ-plot](./images/qq-plot.png)
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/fitted_vs_resid.png" width="400" height="300"/>  |  <img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot.png" width="400" height="300"/>
 *Figure 3: Fitted values vs Residuals checks linearity and homoskedasticity* |  *Figure 4: QQ-plot checks normality of residuals*
 
 
