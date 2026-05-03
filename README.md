@@ -40,7 +40,7 @@ Visual analysis in Tableau revealed four variables that show a visible relations
 
 ![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png)
 
-<img src="[https://github.com/favicon.ico](https://github.com/annaaa-li/student_performance/blob/main/images/exam_score_(median)_by_attendance.png)" width="48">
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/exam_score_(median)_by_attendance.png" width="100" height="100"/>
 
 *Figure 1:  positive correlation across all teaching quality levels for median exam score and attendance*
 
