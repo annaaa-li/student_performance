@@ -11,7 +11,7 @@ As a former English teacher and current language student, I’ve spent a lot of 
 This project evaluates and identifies variables that are statistically significant to student performance-measured by exam scores. It demonstrates a complete analytical workflow, including data preprocessing, model fitting, evaluation, and statistical testing.
 
 ## Dataset Description
-The dataset contains 20 variables describing student profiles, including:
+The dataset contains a total of 6377 observations and 20 variables describing student profiles, including:
 * **Socioeconomic Factors:** School_Type, Access_to_Resources, Internet_Access, Tutoring_Sessions, Family_Income, Parental_Education_Level
 * **Student Effort & Engagement:** Hours_Studied, Attendance, Motivation_Level
 * **Academic Background:** Previous_Scores
@@ -72,19 +72,21 @@ Fitted Values vs Residuals             |  QQ-plot
 *Figure 3: Fitted values vs Residuals checks linearity and homoskedasticity* |  *Figure 4: QQ-plot checks normality of residuals*
 
 
-These both indicate issues with our model. These graphs show 2 distinct clusters as opposed to a curve or funnel like trend typically seen. Examining the observations that resulted in large residual values found that they were all from high performing students (with exam scores >=78). This suggests perhaps our model does a poor job of predicting high performing students possibly due to key variables missing. 
+These both indicate issues with our model. For our assumptions to be satisfied we would expect to see a random scatter on the fitted vs residuals plot and points forming a straight diagonal line on the qq-plot. These graphs show 2 distinct clusters. Further examination of the observations that resulted in large residual values found that they were all from high performing students (with exam scores >=78). This suggests our model does a poor job of predicting high performing students possibly due to key variables missing. 
 
-Specifically 54 observations from the dataset are high performing students (with exam scores >=78) with 49 out of 54 observations contributing to very large (abnormal) residual values. This does not appear to be an issue that can be fixed by adding a nonlinear or interaction term. Looking at a histogram of the exam scores also pictures high scorers as a very small proportion of the overall sample population.
+54 observations from the dataset are high performing students (with exam scores >=78) with 49 out of 54 observations contributing to very large (abnormal) residual values. This does not appear to be an issue that can be fixed by adding a nonlinear or interaction term.
 
-![Histogram of Exam Scores](./images/hist_exam_scores.png)
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/hist_exam_scores.png" width="500" height="400"/> 
 
-As we are unable to accurately account for high performing students I decided to redefine my analysis to focus on exploring what factors influence exam scores among mid-performing students.
+*Figure 5: Histogram of Exam Scores*
+
+Looking at a histogram of the exam scores also pictures high scorers as a very small proportion of the overall sample population. As we are unable to accurately account for high performing students I decided to redefine my analysis to focus on exploring what factors influence exam scores among mid-performing students.
 
 ### Removing High Performers and Refitting the Data
 
 After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality at the tails which we can ignore since our sample size is rather large.
 
-![qq-plot for new model](./images/qq-plot_avg_students.png)
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/> 
 
 However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and checks the assumption of linearity and the assumption of homoskedasticity. Within each band the residuals appear to be randomly scattered around 0 and there is no curvature or systematic shape within the bands so we assume linearity holds.
 
