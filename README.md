@@ -38,13 +38,13 @@ The data cleaning process checked for and addressed the following:
 
 Visual analysis in Tableau revealed four variables that show a visible relationship with median exam score: attendance, hours studied, tutoring sessions, and parental involvement. Among these, attendance and hours studied demonstrate the strongest variation in median scores, while parental involvement and tutoring sessions show more modest differences. 
 
-![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png)
+![exam score (median) by attendance](./images/exam_score_(median)_by_attendance.png){width=60%}
 
-*Figure 1: Chart displaying median exam score by attendance shows a positive correlation across all teaching quality levels*
+*Figure 1:  positive correlation across all teaching quality levels for median exam score and attendance*
 
-![exam score (median) by hours studied](./images/exam_score_(median)_by_hours_studied.png)
+![exam score (median) by hours studied](./images/exam_score_(median)_by_hours_studied.png){width=60%}
 
-*Figure 2: median exam score by hours studied*
+*Figure 2: positive correlation for median exam score and hours studied with a slight drop at right tail end*
 
 Figure 1 and Figure 2 show a noticable correlation between factors and median exam score and a larger range in median scores signalling a potential cause and effect relationship. Based on these figures we try to fit a linear model with the focus on evaluating the significance of attendance and hours studied on a student's exam score.
 
@@ -67,10 +67,10 @@ I started by running a linear regression with Exam Score as the response variabl
 ##### Linearity, Homoskedasticity and Normality
 To check these assumptions I plotted the residuals vs fitted values and a qq-plot.
 
-Fitted vs Residuals             |  QQ-plot
+Fitted Values vs Residuals             |  QQ-plot
 :-------------------------:|:-------------------------:
 ![Homoscedasticity check](./images/fitted_vs_resid.png)  |  ![QQ-plot](./images/qq-plot.png)
-*Figure 3: Fitted values vs Residuals used to check for linearity and homoskedasticity* |  *Figure 4: QQ-plot checks normality of residuals*
+*Figure 3: Fitted values vs Residuals checks linearity and homoskedasticity* |  *Figure 4: QQ-plot checks normality of residuals*
 
 
 These both indicate issues with our model. These graphs show 2 distinct clusters as opposed to a curve or funnel like trend typically seen. Examining the observations that resulted in large residual values found that they were all from high performing students (with exam scores >=78). This suggests perhaps our model does a poor job of predicting high performing students possibly due to key variables missing. 
