@@ -119,7 +119,7 @@ This is means that our model satisfies all the model assumptions.
 ## Results
 From the summary of the final model we get the following:
 
-**$$R^{2}$$:** 0.910
+**R²:** 0.910
 
 **F-Statistic:** 3523
 
