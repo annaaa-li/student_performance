@@ -88,29 +88,29 @@ Looking at a histogram of the exam scores also pictures high scorers as a very s
 <img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/> 
 *Figure 6: QQ-plot of residuals for model fit with data from mid-performing students*
 
+
 After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality at the tails which we can ignore since our sample size is rather large.
 
 <img src="https://github.com/annaaa-li/student_performance/blob/main/images/fitted_vs_resid_avg_students.png" width="500" height="400"/> 
 
 *Figure 7: fitted values vs residuals for model fit with data from mid-performing students*
 
+
 However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and checks the assumption of linearity and the assumption of homoskedasticity. Within each band the residuals appear to be randomly scattered around 0 and there is no curvature or systematic shape within the bands so we assume linearity holds.
 
-Additionally, performing a Breusch-Pagan test validates there is no statistical evidence of heteroskedasticity and our model assumption of homoskedasticity hold.
+Additionally, performing a Breusch-Pagan test shows there is no statistical evidence of heteroskedasticity and our model assumption of homoskedasticity hold.
 
-`het_breuschpagan(lm_avg.resid, lm_avg.model.exog)
+#### Multicollinearity and Influential Points
 
-output: (16.65273136551327, 0.5470899736943641, 0.9248073942751136, 0.5475789633026553)`
+Calculating Variance Inflation Factor (VIF) for the model results in values between 1-2 which implies very mild multicollinearity, so the model assumption is satisfied.
 
-*both p-values are > 0.05 so there is no evidence to reject the null hypothesis (H₀): homoskedasticity (constant error variance)*
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/cooks_distance.png" width="500" height="400"/> 
+*Figure 8: Plot of Cook's Distance values and threshold line for identifying influential observations*
 
-Next, calculating Variance Inflation Factor (VIF) for the model results in values between 1-2 which implies very mild multicollinearity, so the model assumption is satisfied.
+Last, we check influence using Cook's distance. Calculating and plotting Cook's distance results in 254 observations with values above the Cook's distance threshold (~0.00063) which is calculated as 4/n, where n is the total number of observations in the dataset. Since the dataset has over 6000 observations this threshold is very small. In this case all of the observations above the threshold are also very small (<<0.01) and are likely not to be a threat or significant influence on the model.
 
-Last we check influence using Cook's distance. Calculating and plotting Cook's distance results in 254 observations with values above the Cook's distance threshold (4/n - where n is the total number of observations in the dataset). Since the dataset has over 6000 observations this threshold is very small (~0.00063). In this case all of the observations above the threshold are still very small (<<0.01) and are likely not to be a threat or significant influence on the model.
 
-![Cook's distance](./images/cooks_distance.png)
-
-As a pre-caution I inspected the top 20 points with the largest Cook's distance values and refit the model excluding the points above the threshold. The coefficients, standard errors, and \(R^{2}\) do not change substantially between the two model so I concluded that the points are not truly that influential.
+As a pre-caution I inspected the top 20 points with the largest Cook's distance values and refit the model excluding the points above the threshold. The coefficients, standard errors, and $\R^{2}\$ do not change substantially between the two models so it is reasonable to assume that the points are not that influential.
 
 This is means that our model satisfies all the model assumptions.
 
