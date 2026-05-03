@@ -120,11 +120,10 @@ This is means that our model satisfies all the model assumptions.
 ### Conclusion
 This project successfully developed a linear regression model that predicts student exam score for average performing students (with scores between 50%-78%) with 91% variance explained (R² = 0.910) and an average prediction error of approximately ___ (14.4% relative error).
 
-### Technical Implementation
-**Libraries Used:**
-* Data manipulation: pandas, numpy
-* Visualization: matplotlib
-* Modelling and Evaluation: statsmodels
+### Libraries Used:
+* **Data manipulation:** pandas, numpy
+* **Visualization:** matplotlib
+* **Modelling and Evaluation:** statsmodels
 
 ### Author
 Anna Li
