@@ -42,7 +42,7 @@ Visual analysis in Tableau revealed four variables that show a visible relations
 
 *Figure 1:  positive correlation across all teaching quality levels for median exam score and attendance*
 
-![exam score (median) by hours studied](./images/exam_score_(median)_by_hours_studied.png| width = 800)
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/exam_score_(median)_by_hours_studied.png" width="700" height="500"/>
 
 *Figure 2: positive correlation for median exam score and hours studied with a slight drop at right tail end*
 
