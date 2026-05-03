@@ -85,7 +85,8 @@ Looking at a histogram of the exam scores also pictures high scorers as a very s
 
 #### Removing High Performers and Refitting the Data
 
-<img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/> 
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/>
+
 *Figure 6: QQ-plot of residuals for model fit with data from mid-performing students*
 
 
@@ -105,6 +106,7 @@ Additionally, performing a Breusch-Pagan test shows there is no statistical evid
 Calculating Variance Inflation Factor (VIF) for the model results in values between 1-2 which implies very mild multicollinearity, so the model assumption is satisfied.
 
 <img src="https://github.com/annaaa-li/student_performance/blob/main/images/cooks_distance.png" width="500" height="400"/> 
+
 *Figure 8: Plot of Cook's Distance values and threshold line for identifying influential observations*
 
 Last, we check influence using Cook's distance. Calculating and plotting Cook's distance results in 254 observations with values above the Cook's distance threshold (~0.00063) which is calculated as 4/n, where n is the total number of observations in the dataset. Since the dataset has over 6000 observations this threshold is very small. In this case all of the observations above the threshold are also very small (<<0.01) and are likely not to be a threat or significant influence on the model.
