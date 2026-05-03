@@ -1,9 +1,10 @@
 # Evaluating Student Performance Factors Using Linear Regression
-This project showcases data cleaning and analysis techniques to explore factors that could affect student performance. The dataset used in this project was sourced from Kaggle and is intended for educational and portfolio purposes; therefore, findings should be interpreted as illustrative rather than definitive.
+This project showcases data cleaning and analysis techniques to explore factors that could affect student performance. The dataset used in this project was sourced from Kaggle and is intended for educational purposes; therefore, findings should be interpreted as illustrative rather than definitive.
 
 ## Key Skills
 * Cleaning and Preparing Data
 * Linear Regression
+* Model evaluation and interpretation
 
 ## Project Overview
 As a former English teacher and current language student, I’ve spent a lot of time developing an understanding of how people learn. Through my experience in education, I’ve observed patterns that appear to influence student performance, which I aim to examine more systematically in this project.
@@ -159,6 +160,9 @@ This project successfully fit a linear regression model that predicts student ex
 * **Data manipulation:** pandas, numpy
 * **Visualization:** matplotlib
 * **Modelling and Evaluation:** statsmodels
+
+## Dataset Used:
+[Kaggle Student Performance Dataset](https://www.kaggle.com/datasets/ayeshasiddiqa123/student-perfirmance/data)
 
 ### Author
 Anna Li
