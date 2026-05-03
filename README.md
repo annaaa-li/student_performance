@@ -108,6 +108,8 @@ Next, calculating Variance Inflation Factor (VIF) for the model results in value
 
 Last we check influence using Cook's distance. Calculating and plotting Cook's distance results in 254 observations with values above the Cook's distance threshold (4/n - where n is the total number of observations in the dataset). Since the dataset has over 6000 observations this threshold is very small (~0.00063). In this case all of the observations above the threshold are still very small (<<0.01) and are likely not to be a threat or significant influence on the model.
 
+![Cook's distance](./images/cooks_distance.png)
+
 As a pre-caution I inspected the top 20 points with the largest Cook's distance values and refit the model excluding the points above the threshold. The coefficients, standard errors, and \(R^{2}\) do not change substantially between the two model so I concluded that the points are not truly that influential.
 
 This is means that our model satisfies all the model assumptions.
