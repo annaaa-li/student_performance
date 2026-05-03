@@ -8,7 +8,7 @@ This project showcases data cleaning and analysis techniques to explore factors 
 ## Project Overview
 As a former English teacher and current language student, I’ve spent a lot of time developing an understanding of how people learn. Through my experience in education, I’ve observed patterns that appear to influence student performance, which I aim to examine more systematically in this project.
 
-This project evaluates and identifies variables that are statistically significant to student performance-measured by exam scores. It demonstrates a complete analytical workflow, including data preprocessing, model fitting, evaluation, and statistical testing.
+This project evaluates and identifies variables that are statistically significant to student performance-measured by exam scores. It demonstrates a complete analytical workflow, including data preprocessing, model fitting, and evaluation.
 
 ## Dataset Description
 The dataset contains a total of 6377 observations and 20 variables describing student profiles, including:
