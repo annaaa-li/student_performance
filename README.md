@@ -56,14 +56,15 @@ I started by running a linear regression with Exam Score as the response variabl
 
 *Not included: Access_to_Resources Extracurricular_Activities Internet_Access Peer_Influence Physical_Activity Distance_from_Home*
 
-#### The workflow for checking model assumptions for an LM is as follows:
+**The workflow for checking model assumptions for an LM is as follows:**
 * Residuals vs fitted → linearity + homoscedasticity (visual)
 * QQ plot → normality
 * Breusch–Pagan → formal heteroskedasticity/homoscedasticity test
 * VIF → multicollinearity
 * Cook’s distance / leverage → influence
 
-##### Linearity, Homoskedasticity and Normality
+
+#### Linearity, Homoskedasticity and Normality
 To check these assumptions I plotted the residuals vs fitted values and a qq-plot.
 
 Fitted Values vs Residuals             |  QQ-plot
@@ -82,17 +83,20 @@ These both indicate issues with our model. For our assumptions to be satisfied w
 
 Looking at a histogram of the exam scores also pictures high scorers as a very small proportion of the overall sample population. As we are unable to accurately account for high performing students I decided to redefine my analysis to focus on exploring what factors influence exam scores among mid-performing students.
 
-### Removing High Performers and Refitting the Data
+#### Removing High Performers and Refitting the Data
+
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/> 
+*Figure 6: QQ-plot of residuals for model fit with data from mid-performing students*
 
 After dropping the observations of high performing students and refitting the model we get a much more reasonable qq-plot with very mild non-normality at the tails which we can ignore since our sample size is rather large.
 
-<img src="https://github.com/annaaa-li/student_performance/blob/main/images/qq-plot_avg_students.png" width="500" height="400"/> 
+<img src="https://github.com/annaaa-li/student_performance/blob/main/images/fitted_vs_resid_avg_students.png" width="500" height="400"/> 
+
+*Figure 7: fitted values vs residuals for model fit with data from mid-performing students*
 
 However the fitted values vs residuals plot shows diagonal banding as opposed to a random scatter. A random scatter is expected and checks the assumption of linearity and the assumption of homoskedasticity. Within each band the residuals appear to be randomly scattered around 0 and there is no curvature or systematic shape within the bands so we assume linearity holds.
 
 Additionally, performing a Breusch-Pagan test validates there is no statistical evidence of heteroskedasticity and our model assumption of homoskedasticity hold.
-
-![fitted values vs residuals for new model](./images/fitted_vs_resid_avg_students.png)
 
 `het_breuschpagan(lm_avg.resid, lm_avg.model.exog)
 
